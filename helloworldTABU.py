@@ -1,5 +1,17 @@
 #!/usr/bin/pyhton
 
+'''
+Author: Marc-Philippe Fuller
+Email: Marc.p.fuller@gmail.com
+Tabu Search
+This code was written to better understand the tabu search algorithm to be used in my masters project
+involving neural netowrks to optimize the weights.
+
+Dependencies:
+sklearn
+
+'''
+
 from sklearn.metrics import mean_squared_error
 from random import randint
 import string
