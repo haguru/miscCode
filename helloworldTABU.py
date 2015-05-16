@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton
+#! /usr/bin/python
 
 '''
 Author: Marc-Philippe Fuller
@@ -66,7 +66,7 @@ def locateBest(candidateList):
 def tabuSearch(tabuListSize,candidateSize,target):
     cstr = ""
     for char in target:
-        cstr = cstr + letters[(rand()%(len(letters)))]
+        cstr = cstr + chr((rand()%90) +32) #letters[(rand()%(len(letters)))]
     bestCandidate = candidate(cstr,target)
     tabuList = [bestCandidate]
     candidateList = []
@@ -83,5 +83,5 @@ def tabuSearch(tabuListSize,candidateSize,target):
         print "Error: ",bestCandidate.error, " cstr = ",bestCandidate.cstr, "iteration: ",itr
         itr+=1
 
-
-tabuSearch(100,1000)
+target = str(raw_input("Enter a string:"))
+tabuSearch(100,1000,target)
